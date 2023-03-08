@@ -1,0 +1,25 @@
+{
+  "name": "best_shop_res",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrystekKa/Best_Shop_Res.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrystekKa/Best_Shop_Res/issues"
+  },
+  "homepage": "https://github.com/KrystekKa/Best_Shop_Res#readme",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3"
+  }
+}
