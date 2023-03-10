@@ -1,0 +1,33 @@
+$color-black: #000;
+$color-blue: #08A6E4;
+$color-green: #55DFB4;
+$color-red: #FB3B64;
+$color-white: #fff;
+$color-grey: #707070;
+$color-light-grey: #A5A5A5;
+
+$font-open-sans: 'Open Sans', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+
+$size-small: 1.1rem;
+$size-normal: 1.6rem;
+$size-title: 3.6rem;
+$size-price: 4.6rem;
+$size-big: 4.9rem;
+$size-statistic: 2rem;
+
+$grid-columns: 12;
+$grid-breakpoints: (
+        "xs": 0,
+        "sm": 480px,
+        "md": 720px,
+        "lg": 960px,
+        "xl": 1200px,
+        "hd": 1600px
+);
+$grid-gaps: (
+        "0": 0,
+        "1": 10px,
+        "2": 20px,
+        "3": 30px
+)
