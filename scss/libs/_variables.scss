@@ -19,15 +19,9 @@ $size-statistic: 2rem;
 $grid-columns: 12;
 $grid-breakpoints: (
         "xs": 0,
-        "sm": 480px,
-        "md": 720px,
-        "lg": 960px,
+        "sm": 576px,
+        "md": 768px,
+        "lg": 992px,
         "xl": 1200px,
         "hd": 1600px
 );
-$grid-gaps: (
-        "0": 0,
-        "1": 10px,
-        "2": 20px,
-        "3": 30px
-)
