@@ -1,0 +1,104 @@
+@use "scss/libs/variables";
+@use "scss/libs/breakpoints";
+
+.navigation {
+  height: 7rem;
+  width: 100vw;
+  box-shadow:0 3px 6px #00000029;
+  display: flex;
+  align-items: center;
+  .navigation-logo {
+    font-size: 3.2rem;
+    color: variables.$color-blue;
+    font-family: variables.$font-raleway;
+    font-weight: lighter;
+  }
+  .navigation-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .nav {
+      font-family: variables.$font-open-sans;
+      font-weight: bold;
+      position: fixed;
+      width: 100vw;
+      left: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      visibility: hidden;
+      box-shadow:0 3px 6px #00000029;
+      @include breakpoints.md {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        box-shadow: none;
+        gap: 9.5rem;
+        padding-right: 20px;
+        height: 7rem;
+      }
+      .nav-list {
+        color: variables.$color-light-grey;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 3.3px;
+        margin-bottom: 14px;
+        display: block;
+        @include breakpoints.md {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          height: 7rem;
+        }
+        &:hover {
+          color: variables.$color-black;
+          @include breakpoints.md {
+            border-bottom: 4px solid  variables.$color-blue;
+          }
+        }
+      }
+    }
+    .hamburger {
+      display: block;
+      width: 2rem;
+      height: 1.2rem;
+      border-top: 2px solid variables.$color-blue;
+      position: relative;
+      @include breakpoints.md {
+        display: none;
+      }
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 2px solid variables.$color-blue;
+      }
+      &::before {
+        content: "";
+        transform: translateY(4px);
+      }
+      &::after {
+        content: "";
+        transform: translateY(10px);
+      }
+    }
+    .checkbox {
+      display: none;
+    }
+    .checkbox:checked + .nav {
+      width: 100vw;
+      visibility: visible;
+      top: 75px;
+      @include breakpoints.md {
+        display: flex;
+        justify-content: end;
+        top: 0;
+      }
+    }
+  }
+}
