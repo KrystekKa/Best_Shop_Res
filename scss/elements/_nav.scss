@@ -7,35 +7,42 @@
   box-shadow:0 3px 6px #00000029;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   .navigation-logo {
     font-size: 3.2rem;
     color: variables.$color-blue;
     font-family: variables.$font-raleway;
     font-weight: lighter;
+    display: flex;
+    align-items: center;
+    @include breakpoints.md {
+      z-index: 10;
+    }
   }
   .navigation-menu {
+    position: relative;
     display: flex;
-    justify-content: end;
     align-items: center;
+    justify-content: flex-end;
     .nav {
+      position: fixed;
       font-family: variables.$font-open-sans;
       font-weight: bold;
-      position: fixed;
-      width: 100vw;
+      max-width: 100vw;
       left: 0;
       padding-top: 30px;
       padding-bottom: 30px;
       padding-left: 20px;
       visibility: hidden;
       box-shadow:0 3px 6px #00000029;
+      background-color: variables.$color-white;
       @include breakpoints.md {
+        position: relative;
         visibility: visible;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: space-between;
         box-shadow: none;
-        gap: 9.5rem;
-        padding-right: 20px;
         height: 7rem;
       }
       .nav-list {
