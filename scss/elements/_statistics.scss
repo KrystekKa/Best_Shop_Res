@@ -1,0 +1,81 @@
+@use "scss/libs/variables";
+@use "scss/libs/breakpoints";
+
+.statistics-headline {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: variables.$font-raleway;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  @include breakpoints.md {
+    margin-bottom: 100px;
+    font-size: variables.$size-title;
+  }
+}
+.statistics-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  @include breakpoints.md {
+    flex-direction: row;
+    margin-bottom: 120px;
+    justify-content: space-around;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    .box-circle {
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+      background-color: variables.$color-blue;
+    }
+    .box-numbers {
+      font-size: variables.$size-statistic;
+      font-family: variables.$font-raleway;
+      font-weight: 800;
+      letter-spacing: 0.6rem;
+      margin-top: 14px;
+      margin-bottom: 19px;
+    }
+    .box-text {
+      font-family: variables.$font-raleway;
+      font-size: 1.7rem;
+      color: variables.$color-light-grey;
+    }
+  }
+  .box-first {
+    .box-circle {
+      background-color: variables.$color-red;
+      .circle-img {
+        position: relative;
+        left: 30px;
+        top: 3px;
+      }
+    }
+  }
+  .box-second {
+    .box-circle {
+      .circle-img {
+        position: relative;
+        left: 22px;
+        top: 13px;
+      }
+    }
+  }
+  .box-third {
+    .box-circle {
+      background-color: variables.$color-green;
+      .circle-img {
+        position: relative;
+        left: 30px;
+        top: 7px;
+      }
+    }
+  }
+}
